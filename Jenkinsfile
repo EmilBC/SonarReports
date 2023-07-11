@@ -99,11 +99,11 @@ dockerImageTag = "devopsexamplenew${env.BUILD_NUMBER}"
 	   }
     }
     
-  //  stage('Build Docker Image') {
-	 //   steps{
-   //  sh "docker -H  tcp://7.tcp.eu.ngrok.io:16904 build -t reportinggouvernance:${env.BUILD_NUMBER} ."
-	  //  }
-   // }
+    stage('Build Docker Image') {
+	    steps{
+     sh "docker -H  tcp://7.tcp.eu.ngrok.io:16904 build -t reportinggouvernance:${env.BUILD_NUMBER} ."
+	    }
+    }
     
     stage('Deploy Docker Image'){
 	    steps{
